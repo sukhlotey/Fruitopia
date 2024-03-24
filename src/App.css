@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Prosto+One&display=swap");
+
+.head {
+  text-align: center;
+  font-size: xx-large;
+  font-family: "Prosto One", sans-serif;
+  color: rgba(0, 0, 0,0.4);
+}
+.dash-container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.cart-container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.wrapped {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.row {
+  width: calc(25% - 20px);
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 6.25px 20px 0px #00000020;
+  border-radius: 20px;
+  /* border: 1px solid #000; */
+}
+
+.card img {
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  width: 100%;
+  height: 300px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  /* object-fit:contain; */
+}
+.content {
+  padding: 20px;
+  color: #000;
+  background: rgba(238, 231, 231, 0.8);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.card h3 {
+  text-align: center;
+  margin-top: 0;
+}
+.span-price {
+  font-weight: 900;
+}
+
+div .cart-btn {
+  display: flex;
+  justify-content:center;
+  gap: 15px;
+}
+
+.cart-btn button {
+  border: 0;
+  font-size: 35px;
+  width: 60px;
+  height: auto;
+  border-radius: 10px;
+  color: #fff;
+  /* background: rgba(0, 0, 0, 0.5); */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:active {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.cart-btn > .plus{
+  background-color: #012dc0;
+}
+.cart-btn > .minus{
+  background-color: #e20101;
+}
+.nav-ul {
+  /* background: rgba(255, 255, 255); */
+  box-shadow: 0px 6.25px 20px 0px #00000020;
+  list-style: none;
+  display: flex;
+  margin-top: 0;
+  justify-content: space-between;
+}
+
+.nav-ul > .nav-li {
+  padding: 10px;
+  margin: 10px 0;
+}
+.nav-ul:first-child {
+  /* padding-left: 15px; */
+  font-size: x-large;
+}
+.nav-li:last-child {
+  font-size: xx-large;
+  margin-right: 25px;
+  color: #000000;
+}
+.nav-li > a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  &.active {
+    color: #819706;
+    /* background-color: rgb(255, 255, 255, 0.6); */
+    /* padding: 10px 20px; */
+    /* border-radius: 20px; */
+  }
+}
+
+.logo-container {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.remove-btn {
+  background-color: rgba(255, 0, 0);
+  border: 0;
+  padding: 12px;
+  border-radius: 5px;
+  width: 100%;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  &:active {
+    transform: scale(0.97);
+    
+  }
+}
+
+.back-btn{
+  color: #000;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: x-large;
+  margin-left: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  &:active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all .3s ease-in-out;
+  }
+}
+.price-count{
+  display: inline;
+  margin-right: 10px;
+  font-size: large;
+}
+.total-price-bold{
+  font-weight: 900;
+}
+.total-price-div{
+  display: inline;
+  float: right;
+}
+.loading-icon{
+  text-align: center;
+}
+.loading-icon img{
+  width: 100px;
+}
+
+.empty {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  color: rgba(0, 0, 0,0.2);
+  font-weight: 900;
+}
+:root {
+  --scrollbar-width: 5px;
+  --scrollbar-background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  background-color: var(--scrollbar-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #302f2f;
+}
+
+::selection{
+background-color: rgba(0, 0, 0,0.2);
+color: rgba(0, 0, 0,0.4);
+}
+
+@media screen and (max-width: 1200px) {
+  .row {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .row {
+    width: calc(100% - 20px);
+  }
+}
