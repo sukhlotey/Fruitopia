@@ -9,15 +9,12 @@ const Navbar = () => {
         <li className="nav-li">
           <NavLink to="/">Fruitopia</NavLink>
         </li>
-        {/* <li className="nav-li template-name">
-          F.R.U.I.T.S S.H.O.P
-        </li> */}
         <li className="nav-li">
           <NavLink to="cart" className="logo-container">
           <i className="bi bi-cart3"></i>
-            {cartItems.length > 0 && (
+            {/* {cartItems.length > 0 && ( */}
               <span className="cart-count">{cartItems.length}</span>
-            )}
+            {/* )} */}
           </NavLink>
         </li>
       </ul>

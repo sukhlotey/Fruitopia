@@ -37,4 +37,5 @@ const apiSlice = createSlice({
   },
 });
 
+// export const { reducer: dataReducer } = apiSlice;
 export default apiSlice.reducer;

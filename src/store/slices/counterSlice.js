@@ -9,7 +9,7 @@ const counterSlice = createSlice({
   reducers: {
     increment: (state, action) => {
       const { id } = action.payload;
-      state.value[id] = (state.value[id] || 0) + 1;
+      state.value[JSON.stringify(id)] = (state.value[id] || 0) + 1;
       // state.push(action.payload)
       state.history.push(action.payload);
     },
@@ -17,7 +17,7 @@ const counterSlice = createSlice({
       const id = action.payload;
       const indexToRemove = state.history.findIndex((item) => item.id === id);
       if (indexToRemove !== -1) {
-        state.value[id] = Math.max((state.value[id] || 0) - 1, 0);
+        state.value[JSON.stringify(id)] = Math.max((state.value[id] || 0) - 1, 0);
         state.history.splice(indexToRemove, 1); // Remove only one instance of the item
       }
     },
